@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fraud Transaction Detection Internship Project</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+       
+        <style>
+           
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+/* Styles for the outer div */
+#outer {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the header */
+#h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Styles for the form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #333333;
+}
+
+button[type="submit"] {
+    background-color: #ff6b08;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #ff7c3f;
+}
+
+/* Styles for the logo */
+#img {
+    margin-top: 0;
+    margin-right: auto;
+}
+
+/* Styles for the footer */
+footer {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #1d0600;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-top: 1px solid #eeeeee;
+    font-size: 14px;
+}
+input[type="number"]:hover {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+img{
+    width:100px
+}
+
+@media screen and (min-width: 768px) {
+    /* Styles for the form on larger screens */
+    form {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+        </style>
+    </head>
+   
+    <body >
+        <div id ="outer">
+            <img id ="img" src="/static/ineuron_logo.png" alt="ineuron logo"  >
+            <header>
+                <h1 id="h1" >Transaction Prediction Form</h1>
+            </header>
+            <form method="POST", action="{{url_for('home')}}">
+                <label class ="label">Step: </label><br>
+                <input required type="number" name='Time' placeholder="Enter the time in seconds"><br>
+                <label class ="label">Type: </label><br>
+                <input required type="number" name='val1' placeholder="enter 2nd value"><br>
+                <label class ="label">Amount: </label><br>
+                <input type="number" name='val2' placeholder="enter 3rd value"><br>
+                <label class ="label">Old Original Balance  </label><br>
+                <input type="number" name='val3' placeholder="enter 4th value"><br>
+                <label class ="label">New Original Balance</label><br>
+                <input type="number" name='val4' placeholder="enter 5th value"><br>
+                <label class ="label">Old Changed Balance </label><br>
+                <input type="number" name='val5' placeholder="enter 6th value"><br>
+                <label class ="label">New Changed balance </label><br>
+                <input type="number" name='val6' placeholder="enter 7th value"><br>
+                <label class ="label">Cash In</label><br>
+                <input type="number" name='val7' placeholder="enter 7th value"><br>
+                <label class ="label">Cash Out</label><br>
+                <input type="number" name='val8' placeholder="enter 7th value"><br>
+                <label class ="label">Debit</label><br>
+                <input type="number" name='val9' placeholder="enter 7th value"><br>
+                <label class ="label">Payment</label><br>
+                <input type="number" name='val10' placeholder="enter 7th value"><br>
+                
+                <div style="text-align: center;width: 100%;" >
+                    <button id="btn" type="submit" value="Predict">Predict</button>
+                </div>
+            </form>
+        
+    </div>
+    </body>
+    <footer > Created By Madhvendra Singh and Akanksha Srivastava
+        <h2 >ineuron.ai</h2> </footer>
+</html>

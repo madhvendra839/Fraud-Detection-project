@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Transaction Detection</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+      body {
+        background-color: #f8f8f8;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin: 0;
+        text-transform: uppercase;
+      }
+      .result {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        margin: 20px auto;
+        max-width: 600px;
+        padding: 40px;
+        text-align: center;
+      }
+      .result h2 {
+        color: #ff4f4f;
+        font-size: 48px;
+        font-weight: 600;
+        margin: 0 0 20px;
+      }
+      .result p {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0 0 40px;
+      }
+      a {
+        color: #ff4f4f;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Fraud Transaction Detection</h1>
+    </header>
+    <div class="result">
+      {% if data == 0 %}
+        <h2>Not a Fraud Transaction</h2>
+        <p>This transaction is legitimate and does not require further action.</p>
+      {% else %}
+        <h2>Fraud Transaction Detected</h2>
+        <p>This transaction appears to be fraudulent and requires further investigation.</p>
+      {% endif %}
+      <a href="/" class="txt1">Go back to home page</a>
+    </div>
+    <footer>
+      <p style="text-align: center; margin: 50px 0;">© 2023 Fraud Transaction Detection. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
+
+
+
+
